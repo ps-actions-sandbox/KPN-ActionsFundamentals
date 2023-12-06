@@ -10,6 +10,9 @@ jobs:
   run-stuff:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/container-action@main
+    - uses: ps-actions-sandbox/kpn-test@main
       with: 
-        who-to-greet: 'Jesse'
+        your-name: 'Jesse'
+      id: kpntest
+
+    - run: echo ${{ steps.kpntest.time }}
