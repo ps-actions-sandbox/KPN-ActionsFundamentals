@@ -10,11 +10,6 @@ jobs:
   run-stuff:
     runs-on: ubuntu-latest
     steps:
-    - run: echo "Hello world!"
-    - run: |
-        echo "One"
-        echo "Two"
-
-    - run: |
-        echo '${{ toJSON(github) }}'
-        echo '${{ toJSON(runner) }}'
+    - uses: actions/container-action@main
+      with: 
+        who-to-greet: 'Jesse'
