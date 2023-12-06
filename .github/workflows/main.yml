@@ -1,0 +1,16 @@
+name: My First Workflow
+on:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+
+
+jobs:
+  run-stuff:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Hello world!"
+    - run: |
+        echo "One"
+        echo "Two"
