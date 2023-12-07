@@ -10,9 +10,4 @@ jobs:
   run-stuff:
     runs-on: ubuntu-latest
     steps:
-    - uses: ps-actions-sandbox/kpn-test@main
-      with: 
-        your-name: 'Jesse'
-      id: kpntest
-
-    - run: echo ${{ steps.kpntest.time }}
+    - run: echo ${{ secrets.MY_SECRET_KEY }}
