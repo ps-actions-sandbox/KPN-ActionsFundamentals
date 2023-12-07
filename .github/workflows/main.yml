@@ -9,5 +9,6 @@ on:
 jobs:
   run-stuff:
     runs-on: ubuntu-latest
+    environment: Production
     steps:
     - run: echo ${{ secrets.MY_SECRET_KEY }}
